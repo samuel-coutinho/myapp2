@@ -1,0 +1,37 @@
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+        <% quote.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type_building %>
+    <%= form.text_field :type_building %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_apartments %>
+    <%= form.number_field :number_apartments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_floors %>
+    <%= form.number_field :number_floors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_basements %>
+    <%= form.number_field :number_basements %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

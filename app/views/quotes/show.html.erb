@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type building:</strong>
+  <%= @quote.type_building %>
+</p>
+
+<p>
+  <strong>Number apartments:</strong>
+  <%= @quote.number_apartments %>
+</p>
+
+<p>
+  <strong>Number floors:</strong>
+  <%= @quote.number_floors %>
+</p>
+
+<p>
+  <strong>Number basements:</strong>
+  <%= @quote.number_basements %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>
